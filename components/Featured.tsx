@@ -79,7 +79,7 @@ const Featured = () => {
 				<div className="w-full">
 					<FeaturedImage
 						link="/"
-						imgSrc="/featured.webp"
+						imgSrc="/category/1.webp"
 						category="coding"
 						title="Take a 3D tour through a Microsoft datacenter?"
 						author="by Naseem Khan"
@@ -91,7 +91,7 @@ const Featured = () => {
 				<div className="w-full">
 					<FeaturedImage
 						link="/"
-						imgSrc="/featured.webp"
+						imgSrc="/category/5.webp"
 						category="travel"
 						title="Take a 3D tour through a Microsoft datacenter?"
 						author="by Naseem Khan"

@@ -15,7 +15,7 @@ const Category = ({ link, imgSrc, name, bgColor }: CategoryProps) => {
 		<Link
 			href={`${link}`}
 			className={cn(
-				"lg:w-full flex items-center justify-center gap-3 capitalize bg-indigo-500/10 rounded-md py-3 lg:py-4 px-8 lg:px-5",
+				"lg:w-full flex items-center justify-center gap-3 capitalize bg-indigo-500/10 dark:bg-indigo-500/40 hover:bg-indigo-500 hover:text-white dark:hover:bg-indigo-600 rounded-md py-3 lg:py-4 px-8 lg:px-5",
 				bgColor
 			)}
 		>
@@ -41,33 +41,33 @@ const CategoryList = () => {
 					<Category link={"/"} imgSrc="/category/1.webp" name="technology" />
 					<Category
 						link={"/"}
-						imgSrc="/category/1.webp"
+						imgSrc="/category/2.webp"
 						name="coding"
-						bgColor="bg-orange-500/10"
+						bgColor="bg-orange-500/10 dark:bg-orange-500/40"
 					/>
 					<Category
 						link={"/"}
-						imgSrc="/category/1.webp"
+						imgSrc="/category/3.webp"
 						name="style"
-						bgColor="bg-green-500/10"
+						bgColor="bg-green-500/10 dark:bg-green-500/40"
 					/>
 					<Category
 						link={"/"}
-						imgSrc="/category/1.webp"
+						imgSrc="/category/4.webp"
 						name="fashion"
-						bgColor="bg-sky-500/10"
+						bgColor="bg-sky-500/10 dark:bg-sky-500/40"
 					/>
 					<Category
 						link={"/"}
-						imgSrc="/category/1.webp"
+						imgSrc="/category/5.webp"
 						name="food"
-						bgColor="bg-fuchsia-500/10"
+						bgColor="bg-fuchsia-500/10 dark:bg-fuchsia-500/40"
 					/>
 					<Category
 						link={"/"}
-						imgSrc="/category/1.webp"
+						imgSrc="/category/6.webp"
 						name="travel"
-						bgColor="bg-zinc-500/10"
+						bgColor="bg-zinc-500/10 dark:bg-zinc-500/40"
 					/>
 				</div>
 			</div>

@@ -50,7 +50,7 @@ const Navbar = () => {
 					<div>
 						<ul
 							className={cn(
-								"capitalize z-50 flex md:items-center gap-1 md:gap-4 lg:gap-8 text-sm lg:text-[.8rem] fixed md:relative bg-white dark:bg-[#09090B] md:w-auto md:bg-transparent dark:md:bg-transparent h-screen md:h-auto top-0 left-0 flex-col md:flex-row shadow-xl py-20 md:py-0 overflow-hidden transition-all duration-500 dark:border-r dark:border-white/5 dark:md:border-r-0 md:shadow-none dark:text-white/70",
+								"capitalize z-50 flex md:items-center gap-1 md:gap-4 lg:gap-8 text-sm lg:text-[.8rem] fixed md:relative bg-white dark:bg-dark-color md:w-auto md:bg-transparent dark:md:bg-transparent h-screen md:h-auto top-0 left-0 flex-col md:flex-row shadow-xl py-20 md:py-0 overflow-hidden transition-all duration-500 dark:border-r dark:border-white/5 dark:md:border-r-0 md:shadow-none dark:text-white/70",
 								menu ? "w-full sm:w-80" : "w-0"
 							)}
 						>

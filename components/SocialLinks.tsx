@@ -6,18 +6,15 @@ import {
 	BiLogoGithub,
 } from "react-icons/bi";
 
-const SocialLinks = ({ moreClasses }: { moreClasses?: String }) => {
+const SocialLinks = ({ additionalClasses }: { additionalClasses?: String }) => {
+	const iconClasses =
+		"cursor-pointer hover:text-indigo-600 hover:-translate-y-2 transition-all";
 	return (
-		<div
-			className={cn(
-				"flex items-center gap-3 text-2xl text-black/70 dark:text-white/70",
-				moreClasses
-			)}
-		>
-			<BiLogoFacebook className="cursor-pointer hover:text-indigo-600 hover:-translate-y-2 transition-all" />
-			<BiLogoInstagram className="cursor-pointer hover:text-indigo-600 hover:-translate-y-2 transition-all" />
-			<BiLogoTwitter className="cursor-pointer hover:text-indigo-600 hover:-translate-y-2 transition-all" />
-			<BiLogoGithub className="cursor-pointer hover:text-indigo-600 hover:-translate-y-2 transition-all" />
+		<div className="flex items-center gap-3 text-2xl text-black/70 dark:text-white/70">
+			<BiLogoFacebook className={cn(iconClasses, additionalClasses)} />
+			<BiLogoInstagram className={cn(iconClasses, additionalClasses)} />
+			<BiLogoTwitter className={cn(iconClasses, additionalClasses)} />
+			<BiLogoGithub className={cn(iconClasses, additionalClasses)} />
 		</div>
 	);
 };

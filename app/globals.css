@@ -84,13 +84,3 @@
 	background-color: #e3e3e388;
 	border-radius: 50px;
 }
-
-@media (prefers-color-scheme: dark) {
-	.category::-webkit-scrollbar-thumb {
-		background-color: orange;
-	}
-}
-
-.category::-webkit-scrollbar-thumb[data-theme="dark"] {
-	background-color: orange;
-}
