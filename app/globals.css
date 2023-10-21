@@ -74,3 +74,23 @@
 		@apply bg-background text-foreground p-0 m-0 overflow-x-hidden;
 	}
 }
+
+.category::-webkit-scrollbar {
+	background-color: transparent;
+	height: 5px;
+	border-radius: 50px;
+}
+.category::-webkit-scrollbar-thumb {
+	background-color: #e3e3e388;
+	border-radius: 50px;
+}
+
+@media (prefers-color-scheme: dark) {
+	.category::-webkit-scrollbar-thumb {
+		background-color: orange;
+	}
+}
+
+.category::-webkit-scrollbar-thumb[data-theme="dark"] {
+	background-color: orange;
+}

@@ -6,7 +6,7 @@ import Pagination from "@/components/Pagination";
 
 export default function Home() {
 	return (
-		<div>
+		<div className="flex flex-col gap-12">
 			<Featured />
 			<CategoryList />
 			<CardList />
