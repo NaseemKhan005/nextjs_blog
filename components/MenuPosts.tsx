@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 import MenuTitle from "@/components/MenuTitle";
+import PublishDate from "./PublishDate";
 
 // interface MenuTitleProps {
 // 	title: String;
@@ -28,11 +29,12 @@ const Post = () => {
 				>
 					coding
 				</Link>
-				<div className="capitalize flex items-center gap-2 text-xs relative h-fit">
-					<p>by Naseem khan</p>
-					<span className="block bg-dark-color dark:bg-white w-[.4rem] aspect-square rounded-full" />
-					<p>December 16, 2023</p>
-				</div>
+				{/* <PublishDate author={author} date={date} /> */}
+				<PublishDate
+					author="by Naseem khan"
+					date="December 16, 2023"
+					additionalClasses="bg-dark-color dark:bg-white"
+				/>
 			</div>
 		</Link>
 	);

@@ -1,6 +1,7 @@
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
+import PublishDate from "./PublishDate";
 
 interface FeaturedImageProps {
 	link: String;
@@ -52,11 +53,7 @@ const FeaturedImage = ({
 				>
 					{title}
 				</h1>
-				<div className="capitalize flex items-center gap-2 text-xs relative h-fit">
-					<p>{author}</p>
-					<span className="block bg-white w-[.4rem] aspect-square rounded-full" />
-					<p>{date}</p>
-				</div>
+				<PublishDate author={author} date={date} />
 			</div>
 		</Link>
 	);
