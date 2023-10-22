@@ -5,7 +5,7 @@ import AllCategories from "./AllCategories";
 
 const Menu = () => {
 	return (
-		<div className="flex flex-col gap-10 flex-1 w-full">
+		<div className="flex flex-col gap-10 md:flex-[1.3] lg:flex-1 w-full md:sticky md:top-5">
 			<MenuPosts />
 			<Newsletter />
 			<MenuPosts />

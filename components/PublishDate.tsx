@@ -8,7 +8,7 @@ interface PublishDateProps {
 
 const PublishDate = ({ author, date, additionalClasses }: PublishDateProps) => {
 	return (
-		<div className="capitalize flex items-center gap-2 text-xs relative h-fit">
+		<div className="capitalize flex items-center gap-2 text-[.7rem] lg:text-xs relative h-fit">
 			<p>{author}</p>
 			<span
 				className={cn(
