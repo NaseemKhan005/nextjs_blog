@@ -13,7 +13,10 @@ export default function Home() {
 				<LatestPosts />
 				<Menu />
 			</div>
-			<CategoryPost />
+			<CategoryPost
+				categoryName="technology"
+				categoryDesc="Discover by topics"
+			/>
 		</div>
 	);
 }

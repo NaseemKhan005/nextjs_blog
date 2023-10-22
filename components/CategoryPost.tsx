@@ -1,12 +1,20 @@
 import MenuTitle from "@/components/MenuTitle";
 import SinglePostCard from "./SinglePostCard";
-import { Button } from "./ui/button";
 import CommonButton from "./CommonButton";
 
-const CategoryPost = () => {
+interface CategoryPostProps {
+	categoryName: String;
+	categoryDesc?: String;
+}
+
+const CategoryPost = ({ categoryName, categoryDesc }: CategoryPostProps) => {
 	return (
 		<div className="flex-[2] w-full">
-			<MenuTitle title="technology" desc="Discover by topics" />
+			<MenuTitle
+				title={categoryName}
+				desc={categoryDesc}
+				additionalClasses="text-3xl underline underline-offset-4 font-serif"
+			/>
 
 			<div className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-5 gap-y-10 mx-auto">
 				<SinglePostCard

@@ -47,7 +47,7 @@ const FeaturedImage = ({
 				</Link>
 				<h1
 					className={cn(
-						"hover:underline underline-offset-4 text-base sm:text-[1.7rem] leading-snug font-semibold text-white hover:text-white/90",
+						"hover:underline underline-offset-4 text-base sm:text-[1.7rem] leading-snug font-semibold text-white hover:text-white/90 font-serif",
 						titleClasses
 					)}
 				>

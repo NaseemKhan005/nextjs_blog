@@ -34,7 +34,7 @@ const Category = ({ link, imgSrc, name, bgColor }: CategoryProps) => {
 const CategoryList = () => {
 	return (
 		<div className="flex flex-col gap-8">
-			<h2 className="text-2xl font-semibold">Popular Categories👑</h2>
+			<h2 className="text-2xl font-semibold font-serif">Popular Categories👑</h2>
 
 			<div className="overflow-x-auto w-full pb-1 category">
 				<div className="flex items-center justify-between gap-3 md:gap-5 text-sm">

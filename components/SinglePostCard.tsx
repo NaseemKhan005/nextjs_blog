@@ -7,6 +7,7 @@ import React, { useState } from "react";
 import PublishDate from "./PublishDate";
 import PostSocailLinks from "./PostSocailLinks";
 import PostReactions from "./PostReactions";
+import { cn } from "@/lib/utils";
 
 interface PostCardProps {
 	link: String;
@@ -49,7 +50,7 @@ const SinglePostCard = ({
 					/>
 					<Link
 						href={"/category"}
-						className="capitalize absolute lg:top-3 lg:left-3 top-2 left-2 bg-indigo-500/60 hover:bg-indigo-600 border border-indigo-600 text-white rounded-full py-1 px-2 text-[.65rem] lg:text-xs font-semibold"
+						className="capitalize absolute lg:top-3 lg:left-3 top-2 left-2 bg-indigo-500/80 hover:bg-indigo-600 border border-indigo-600 text-white rounded-full py-1 px-2 text-[.65rem] lg:text-xs font-semibold"
 					>
 						{category}
 					</Link>
@@ -68,7 +69,14 @@ const SinglePostCard = ({
 				</div>
 
 				<div className="flex flex-col gap-3">
-					<h2 className="text-lg font-semibold leading-tight">{title}</h2>
+					<h2
+						className={cn(
+							"text-lg font-serif font-semibold leading-tight lg:leading-snug",
+							showIcons ? "text-indigo-600 dark:text-indigo-500" : ""
+						)}
+					>
+						{title}
+					</h2>
 					<p className="text-sm">{desc}</p>
 					<PublishDate
 						author={author}

@@ -1,12 +1,15 @@
 import MenuTitle from "@/components/MenuTitle";
 import LatestPostCard from "./LatestPostCard";
-import { Button } from "./ui/button";
 import CommonButton from "./CommonButton";
 
 const LatestPosts = () => {
 	return (
 		<div className="flex-[2] w-full">
-			<MenuTitle title="Latest Posts" desc="Discover by topics" />
+			<MenuTitle
+				title="Latest Posts"
+				desc="Discover by topics"
+				additionalClasses="text-3xl underline underline-offset-4 font-serif"
+			/>
 
 			<div className="grid lg:grid-cols-2 gap-x-5 gap-y-10">
 				<LatestPostCard
