@@ -24,7 +24,7 @@ const AllCategories = () => {
 			<MenuTitle
 				title="Categories"
 				desc="Discover by topics"
-				additionalClasses="font-serif underline underline-offset-4"
+				additionalClasses="text-xl"
 			/>
 
 			<div className="flex items-center flex-col">

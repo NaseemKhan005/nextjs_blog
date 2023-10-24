@@ -14,12 +14,12 @@ const PostReactions = ({ like, comment }: PostReactionsProps) => {
 			<div className="flex items-center gap-5">
 				<div className="flex items-center gap-2 hover:text-red-500">
 					<AiOutlineHeart className="text-4xl cursor-pointer p-2 bg-muted-foreground/5 hover:bg-red-500/10 rounded-full" />
-					<span>{like}</span>
+					<span className="text-sm">{like}</span>
 				</div>
 				<Link href="#comment">
 					<div className="flex items-center gap-2 hover:text-emerald-500">
 						<AiOutlineMessage className="text-4xl p-2 bg-muted-foreground/5 hover:bg-emerald-500/10 rounded-full" />
-						<span>{comment}</span>
+						<span className="text-sm">{comment}</span>
 					</div>
 				</Link>
 			</div>
@@ -28,7 +28,7 @@ const PostReactions = ({ like, comment }: PostReactionsProps) => {
 				className="font-semibold text-sm flex items-start hover:text-indigo-600"
 			>
 				<span>Read more</span>
-				<MdKeyboardArrowRight className="text-xl mt-[2px]" />
+				<MdKeyboardArrowRight className="text-xl" />
 			</Link>
 		</div>
 	);

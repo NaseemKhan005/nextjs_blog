@@ -27,11 +27,7 @@ const MenuPosts = ({
 }: MenuPostProps) => {
 	return (
 		<div>
-			<MenuTitle
-				title={title}
-				desc={desc}
-				additionalClasses="font-serif underline underline-offset-4"
-			/>
+			<MenuTitle title={title} desc={desc} additionalClasses="text-xl" />
 
 			<div className="flex flex-col gap-5">
 				<Link
@@ -43,15 +39,16 @@ const MenuPosts = ({
 						alt="category image"
 						width={500}
 						height={500}
-						className="rounded-lg w-24 lg:w-28 aspect-square object-cover object-top"
+						className="rounded-lg w-20 lg:w-24 aspect-square object-cover object-top"
 					/>
-					<div className="flex items-start gap-1 flex-col">
-						<h2 className="font-semibold lg:text-base md:text-sm leading-tight font-serif hover:text-indigo-600 dark:hover:text-indigo-500">
+					<div className="flex items-start gap-1 lg:gap-2 flex-col">
+						<h2 className="font-semibold text-sm leading-tight hover:text-indigo-600 dark:hover:text-indigo-500">
 							{postTitle}
 						</h2>
+
 						<Link
 							href={"/category"}
-							className="rounded-full text-[.5rem] lg:text-[.6rem] w-fit lg:py-[.3rem] px-2 py-1 uppercase tracking-widest font-[500] bg-indigo-500/80 hover:bg-indigo-600 border border-indigo-600 text-white"
+							className="capitalize bg-indigo-500/80 hover:bg-indigo-600 border border-indigo-600 text-white rounded-full py-1 px-2 text-[.65rem] lg:text-xs font-[500] tracking-wide"
 						>
 							{category}
 						</Link>

@@ -3,16 +3,25 @@ import Image from "next/image";
 
 import SocialLinks from "./SocialLinks";
 import Newsletter from "./Newsletter";
-import MenuPosts from "./MenuPosts";
 import { footerLinks1, footerLinks2, footerLinks3 } from "@/constants/Footer";
 
-const FooterLinks = ({ title, links }) => {
+interface FooterLinksProps {
+	title: String;
+	links: Object[];
+}
+
+const FooterLinks = ({ title, links }: FooterLinksProps) => {
 	return (
 		<div className="w-[20%] md:w-fit capitalize">
 			<h3 className="font-semibold text-lg">{title}</h3>
-			<div className="flex flex-col gap-4 capitalize text-sm mt-10">
+			<div className="flex flex-col gap-4 capitalize text-sm mt-7 md:mt-10">
 				{links.map((link: any) => (
-					<Link key={link.path} href={link.path} className="hover:underline">
+					<Link
+						key={link.path}
+						href={link.path}
+						className="hover:underline"
+						target={link.target}
+					>
 						{link.label}
 					</Link>
 				))}
@@ -53,8 +62,8 @@ const Footer = () => {
 
 				<div className="flex items-start justify-between flex-wrap md:flex-nowrap gap-10 md:gap-16 lg:gap-10 xl:gap-16 md:flex-[2] w-full">
 					<FooterLinks title="links" links={footerLinks1} />
-					<FooterLinks title="categories" links={footerLinks2} />
-					<FooterLinks title="links" links={footerLinks3} />
+					<FooterLinks title="tags" links={footerLinks2} />
+					<FooterLinks title="social" links={footerLinks3} />
 					<div className="w-full">
 						<Newsletter />
 					</div>

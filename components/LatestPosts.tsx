@@ -8,7 +8,7 @@ const LatestPosts = () => {
 			<MenuTitle
 				title="Latest Posts"
 				desc="Discover by topics"
-				additionalClasses="text-3xl underline underline-offset-4 font-serif"
+				additionalClasses="text-2xl md:text-3xl"
 			/>
 
 			<div className="grid lg:grid-cols-2 gap-x-5 gap-y-10">

@@ -8,6 +8,7 @@ import PublishDate from "./PublishDate";
 import PostSocailLinks from "./PostSocailLinks";
 import PostReactions from "./PostReactions";
 import { cn } from "@/lib/utils";
+import { AiOutlineHeart, AiOutlineMessage } from "react-icons/ai";
 
 interface PostCardProps {
 	link: String;
@@ -40,13 +41,16 @@ const SinglePostCard = ({
 			onMouseLeave={() => setShowIcons(false)}
 		>
 			<Link href={`${link}`} className="relative">
-				<div className="relative overflow-hidden mb-5">
+				<div className="relative overflow-hidden mb-5 rounded-2xl">
 					<Image
 						src={`${imgSrc}`}
 						alt="latest post"
 						width={500}
 						height={500}
-						className="object-cover w-full h-full rounded-2xl"
+						className={cn(
+							"object-cover w-full h-full rounded-2xl transition-all duration-500",
+							showIcons ? "scale-110" : "scale-100"
+						)}
 					/>
 					<Link
 						href={"/category"}
@@ -54,6 +58,22 @@ const SinglePostCard = ({
 					>
 						{category}
 					</Link>
+
+					<div
+						className={cn(
+							"flex items-center gap-2 absolute lg:top-3 lg:right-3 top-2 right-2 transition-all duration-500",
+							showIcons ? "scale-100" : "scale-0"
+						)}
+					>
+						<div className="flex items-center gap-1 hover:text-red-500">
+							<AiOutlineHeart className="text-4xl cursor-pointer p-2 bg-white rounded-full" />
+						</div>
+						<Link href="#comment">
+							<div className="flex items-center gap-1 hover:text-emerald-500">
+								<AiOutlineMessage className="text-4xl p-2 bg-white rounded-full" />
+							</div>
+						</Link>
+					</div>
 
 					<PostSocailLinks
 						showIcons={showIcons}
@@ -71,7 +91,7 @@ const SinglePostCard = ({
 				<div className="flex flex-col gap-3">
 					<h2
 						className={cn(
-							"text-lg font-serif font-semibold leading-tight lg:leading-snug",
+							"text-base xl:text-lg font-semibold leading-tight",
 							showIcons ? "text-indigo-600 dark:text-indigo-500" : ""
 						)}
 					>

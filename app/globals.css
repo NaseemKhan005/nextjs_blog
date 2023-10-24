@@ -75,12 +75,16 @@
 	}
 }
 
-.category::-webkit-scrollbar {
+::-webkit-scrollbar {
 	background-color: transparent;
-	height: 5px;
+	width: 6px;
 	border-radius: 50px;
 }
-.category::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
 	background-color: #e3e3e388;
 	border-radius: 50px;
+}
+
+.category::-webkit-scrollbar {
+	height: 5px;
 }

@@ -13,7 +13,7 @@ const CategoryPost = ({ categoryName, categoryDesc }: CategoryPostProps) => {
 			<MenuTitle
 				title={categoryName}
 				desc={categoryDesc}
-				additionalClasses="text-3xl underline underline-offset-4 font-serif"
+				additionalClasses="text-2xl md:text-3xl"
 			/>
 
 			<div className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-5 gap-y-10 mx-auto">
