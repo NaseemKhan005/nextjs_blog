@@ -23,7 +23,7 @@ const Navbar = () => {
 	return (
 		<nav className="py-2 md:py-3 border-b border-black/10 dark:border-white/10">
 			<div className="container px-5 md:px-10 mx-auto flex items-center justify-between">
-				<div className="flex items-center gap-3 text-zinc-700">
+				<div className="flex items-center gap-3 md:gap-1 lg:gap-3 text-zinc-700">
 					<div>
 						<Link href="/">
 							<Image
@@ -40,17 +40,17 @@ const Navbar = () => {
 						<Input
 							type="text"
 							placeholder="Type to Search..."
-							className="rounded-full w-64 lg:w-72 text-xs pr-10"
+							className="rounded-full w-64 md:w-48 lg:w-72 text-xs pr-10"
 						/>
 						<LuSearch className="text-xl text-black/50 dark:text-white/80 absolute right-4 top-1/2 -translate-y-1/2" />
 					</div>
 				</div>
 
-				<div className="flex items-center gap-3 text-zinc-700 dark:text-white/90">
+				<div className="flex items-center gap-3 md:gap-1 lg:gap-3 text-zinc-700 dark:text-white/90">
 					<div>
 						<ul
 							className={cn(
-								"capitalize z-50 flex md:items-center gap-1 md:gap-4 lg:gap-8 text-sm lg:text-[.8rem] fixed md:relative bg-white dark:bg-dark-color md:w-auto md:bg-transparent dark:md:bg-transparent h-screen md:h-auto top-0 left-0 flex-col md:flex-row shadow-xl py-20 md:py-0 overflow-hidden transition-all duration-500 dark:border-r dark:border-white/5 dark:md:border-r-0 md:shadow-none dark:text-white/70",
+								"capitalize z-50 flex md:items-center gap-1 md:gap-3 lg:gap-8 text-sm md:text-[.8rem] lg:text-[.8rem] fixed md:relative bg-white dark:bg-dark-color md:w-auto md:bg-transparent dark:md:bg-transparent h-screen md:h-auto top-0 left-0 flex-col md:flex-row shadow-xl py-20 md:py-0 overflow-hidden transition-all duration-500 dark:border-r dark:border-white/5 dark:md:border-r-0 md:shadow-none dark:text-white/70",
 								menu ? "w-full sm:w-80" : "w-0"
 							)}
 						>

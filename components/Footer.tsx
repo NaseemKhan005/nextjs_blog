@@ -57,7 +57,7 @@ const Footer = () => {
 						accusamus eius minima at repudiandae culpa corrupti quam? A possimus
 						temporibus laboriosam et.
 					</p>
-					<SocialLinks additionalClasses="border rounded-full text-4xl p-1 hover:text-white hover:bg-indigo-600 dark:text-white dark:border-white/20" />
+					<SocialLinks additionalClasses="border rounded-full text-3xl p-1 hover:text-white hover:bg-indigo-600 dark:text-white dark:border-white/20" />
 				</div>
 
 				<div className="flex items-start justify-between flex-wrap md:flex-nowrap gap-10 md:gap-16 lg:gap-10 xl:gap-16 md:flex-[2] w-full">
@@ -83,7 +83,7 @@ const Footer = () => {
 					— All rights reserved.
 				</p>
 
-				<SocialLinks additionalClasses="hover:translate-y-0 dark:hover:text-indigo-500 hover:scale-125 ml-2" />
+				<SocialLinks />
 			</div>
 		</section>
 	);

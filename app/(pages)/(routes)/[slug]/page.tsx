@@ -90,7 +90,7 @@ const SinglePage = () => {
 							<p className="text-zinc-500 dark:text-light-gray/60 text-xs mb-4">
 								Share this:
 							</p>
-							<SocialLinks additionalClasses="text-xl" />
+							<SocialLinks />
 						</div>
 						<div className="flex sm:items-center flex-col sm:flex-row gap-5 lg:gap-8 bg-blue-100/20 dark:bg-[#191e2947] relative py-5 sm:py-10 px-5 lg:p-10 rounded-2xl">
 							<Image
@@ -115,7 +115,7 @@ const SinglePage = () => {
 									right content to the right people.
 								</p>
 								<div className="absolute top-24 left-40 sm:relative sm:top-0 sm:left-0">
-									<SocialLinks additionalClasses="text-lg mt-2" />
+									<SocialLinks additionalClasses="mt-2" />
 								</div>
 							</div>
 						</div>
