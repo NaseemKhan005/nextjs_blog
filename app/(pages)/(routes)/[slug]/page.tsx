@@ -1,6 +1,6 @@
 import Menu from "@/components/Menu";
 import PublishDate from "@/components/PublishDate";
-import SinglePostCard from "@/components/SinglePostCard";
+import SinglePostCard from "@/components/PostCard";
 import SocialLinks from "@/components/SocialLinks";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";

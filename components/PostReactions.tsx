@@ -24,7 +24,7 @@ const PostReactions = ({ like, comment }: PostReactionsProps) => {
 				</Link>
 			</div>
 			<Link
-				href="/"
+				href="/single-post"
 				className="font-semibold text-sm flex items-start hover:text-indigo-600"
 			>
 				<span>Read more</span>

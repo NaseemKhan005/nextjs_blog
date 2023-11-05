@@ -1,6 +1,6 @@
 import MenuTitle from "@/components/MenuTitle";
-import LatestPostCard from "./LatestPostCard";
 import CommonButton from "./CommonButton";
+import PostCard from "./PostCard";
 
 const LatestPosts = () => {
 	return (
@@ -12,7 +12,7 @@ const LatestPosts = () => {
 			/>
 
 			<div className="grid lg:grid-cols-2 gap-x-5 gap-y-10">
-				<LatestPostCard
+				<PostCard
 					link="/"
 					imgSrc="/category/2.webp"
 					category="technology"
@@ -23,7 +23,7 @@ const LatestPosts = () => {
 					like={20}
 					comment={20}
 				/>
-				<LatestPostCard
+				<PostCard
 					link="/"
 					imgSrc="/category/2.webp"
 					category="technology"
@@ -34,7 +34,7 @@ const LatestPosts = () => {
 					like={20}
 					comment={20}
 				/>
-				<LatestPostCard
+				<PostCard
 					link="/"
 					imgSrc="/category/2.webp"
 					category="technology"
@@ -45,7 +45,7 @@ const LatestPosts = () => {
 					like={20}
 					comment={20}
 				/>
-				<LatestPostCard
+				<PostCard
 					link="/"
 					imgSrc="/category/2.webp"
 					category="technology"
@@ -56,7 +56,7 @@ const LatestPosts = () => {
 					like={20}
 					comment={20}
 				/>
-				<LatestPostCard
+				<PostCard
 					link="/"
 					imgSrc="/category/2.webp"
 					category="technology"
@@ -67,7 +67,7 @@ const LatestPosts = () => {
 					like={20}
 					comment={20}
 				/>
-				<LatestPostCard
+				<PostCard
 					link="/"
 					imgSrc="/category/2.webp"
 					category="technology"
@@ -78,7 +78,7 @@ const LatestPosts = () => {
 					like={20}
 					comment={20}
 				/>
-				<LatestPostCard
+				<PostCard
 					link="/"
 					imgSrc="/category/2.webp"
 					category="technology"
@@ -89,7 +89,7 @@ const LatestPosts = () => {
 					like={20}
 					comment={20}
 				/>
-				<LatestPostCard
+				<PostCard
 					link="/"
 					imgSrc="/category/2.webp"
 					category="technology"
@@ -100,7 +100,7 @@ const LatestPosts = () => {
 					like={20}
 					comment={20}
 				/>
-				<LatestPostCard
+				<PostCard
 					link="/"
 					imgSrc="/category/2.webp"
 					category="technology"
@@ -111,7 +111,7 @@ const LatestPosts = () => {
 					like={20}
 					comment={20}
 				/>
-				<LatestPostCard
+				<PostCard
 					link="/"
 					imgSrc="/category/2.webp"
 					category="technology"

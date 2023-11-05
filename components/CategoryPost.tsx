@@ -1,5 +1,5 @@
 import MenuTitle from "@/components/MenuTitle";
-import SinglePostCard from "./SinglePostCard";
+import PostCard from "./PostCard";
 import CommonButton from "./CommonButton";
 
 interface CategoryPostProps {
@@ -17,7 +17,7 @@ const CategoryPost = ({ categoryName, categoryDesc }: CategoryPostProps) => {
 			/>
 
 			<div className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-5 gap-y-10 mx-auto">
-				<SinglePostCard
+				<PostCard
 					link="/"
 					imgSrc="/category/5.webp"
 					category="technology"
@@ -28,7 +28,7 @@ const CategoryPost = ({ categoryName, categoryDesc }: CategoryPostProps) => {
 					like={20}
 					comment={20}
 				/>
-				<SinglePostCard
+				<PostCard
 					link="/"
 					imgSrc="/category/5.webp"
 					category="technology"
@@ -39,7 +39,7 @@ const CategoryPost = ({ categoryName, categoryDesc }: CategoryPostProps) => {
 					like={20}
 					comment={20}
 				/>
-				<SinglePostCard
+				<PostCard
 					link="/"
 					imgSrc="/category/5.webp"
 					category="technology"

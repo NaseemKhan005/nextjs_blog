@@ -4,11 +4,9 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
 
-import PublishDate from "./PublishDate";
 import PostSocailLinks from "./PostSocailLinks";
 import PostReactions from "./PostReactions";
 import { cn } from "@/lib/utils";
-import { AiOutlineHeart, AiOutlineMessage } from "react-icons/ai";
 
 interface PostCardProps {
 	link: String;
@@ -22,7 +20,7 @@ interface PostCardProps {
 	comment: number;
 }
 
-const SinglePostCard = ({
+const PostCard = ({
 	link,
 	imgSrc,
 	category,
@@ -40,7 +38,10 @@ const SinglePostCard = ({
 			onMouseEnter={() => setShowIcons(true)}
 			onMouseLeave={() => setShowIcons(false)}
 		>
-			<Link href={`${link}`} className="relative">
+			<Link
+				href={`${link}`}
+				className={cn("relative", showIcons ? "shadow-xl" : "")}
+			>
 				<div className="relative overflow-hidden mb-5 rounded-2xl">
 					<Image
 						src={`${imgSrc}`}
@@ -54,26 +55,10 @@ const SinglePostCard = ({
 					/>
 					<Link
 						href={"/category"}
-						className="capitalize absolute lg:top-3 lg:left-3 top-2 left-2 bg-indigo-500/80 hover:bg-indigo-600 border border-indigo-600 text-white rounded-full py-1 px-2 text-[.65rem] lg:text-xs font-semibold"
+						className="capitalize absolute lg:top-3 lg:left-3 top-2 left-2 bg-indigo-500/90 hover:bg-indigo-600 border border-indigo-600 text-white rounded-full py-1 px-2 text-[.65rem] lg:text-xs font-semibold"
 					>
 						{category}
 					</Link>
-
-					<div
-						className={cn(
-							"flex items-center gap-2 absolute lg:top-3 lg:right-3 top-2 right-2 transition-all duration-500",
-							showIcons ? "scale-100" : "scale-0"
-						)}
-					>
-						<div className="flex items-center gap-1 hover:text-red-500">
-							<AiOutlineHeart className="text-4xl cursor-pointer p-2 bg-white rounded-full" />
-						</div>
-						<Link href="#comment">
-							<div className="flex items-center gap-1 hover:text-emerald-500">
-								<AiOutlineMessage className="text-4xl p-2 bg-white rounded-full" />
-							</div>
-						</Link>
-					</div>
 
 					<PostSocailLinks
 						showIcons={showIcons}
@@ -84,7 +69,10 @@ const SinglePostCard = ({
 						twitterLink={"/"}
 						hideIconsClass="-bottom-10 opacity-0"
 						showIconsClass="bottom-0 opacity-100"
-						wrapperClasses="flex items-center justify-center text-[1.4rem] gap-8 absolute bg-gray-200 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-30 border border-gray-100/20 py-4 left-0 text-indigo-600 transition-all duration-500 w-full rounded-bl-2xl rounded-br-2xl"
+						wrapperClasses={cn(
+							"flex items-center justify-center text-[1.4rem] gap-8 absolute bg-white py-4 left-0 text-indigo-600 transition-all duration-500 w-full rounded-bl-2xl rounded-br-2xl",
+							showIcons ? "border dark:border-none" : ""
+						)}
 					/>
 				</div>
 
@@ -98,11 +86,24 @@ const SinglePostCard = ({
 						{title}
 					</h2>
 					<p className="text-sm">{desc}</p>
-					<PublishDate
-						author={author}
-						date={date}
-						additionalClasses="bg-dark-color dark:bg-white w-1"
-					/>
+					<Link
+						href={"/profile"}
+						className="capitalize flex items-center gap-2 relative hover:text-black/80 dark:hover:text-white/80"
+					>
+						<Image
+							src="/category/1.webp"
+							alt="author"
+							width={500}
+							height={500}
+							className={cn(
+								"w-10 aspect-square object-cover object-top rounded-full"
+							)}
+						/>
+						<div>
+							<p className="font-semibold text-sm">{author}</p>
+							<p className="text-xs text-black dark:text-white">{date}</p>
+						</div>
+					</Link>
 				</div>
 			</Link>
 
@@ -111,4 +112,4 @@ const SinglePostCard = ({
 	);
 };
 
-export default SinglePostCard;
+export default PostCard;

@@ -1,14 +1,14 @@
-import MenuPosts from "./MenuPosts";
+import MenuPost from "./MenuPost";
 import SocialLinks from "./SocialLinks";
 import Newsletter from "./Newsletter";
 import AllCategories from "./AllCategories";
 
 const Menu = () => {
 	return (
-		<div className="flex flex-col gap-10 md:flex-[1.3] lg:flex-1 w-full md:sticky md:top-5">
-			<MenuPosts
+		<div className="flex flex-col gap-10 md:flex-[1.3] lg:flex-[.9] w-full ">
+			<MenuPost
 				title="Popular posts"
-				desc="what's hot🔥"
+				desc="what's hot"
 				link={"/"}
 				imgSrc={"/category/3.webp"}
 				postTitle={"Take a 3D tour through a Microsoft datacenter?"}
@@ -17,9 +17,9 @@ const Menu = () => {
 				date={"oct 24, 2023"}
 			/>
 			<Newsletter />
-			<MenuPosts
+			<MenuPost
 				title="featured posts"
-				desc="what's hot🔥"
+				desc="what's hot"
 				link={"/"}
 				imgSrc={"/category/4.webp"}
 				postTitle={"Take a 3D tour through a Microsoft datacenter?"}
