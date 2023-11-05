@@ -21,7 +21,7 @@ const SinglePage = () => {
 						</p>
 					</div>
 
-					<h1 className="text-lg sm:text-xl md:text-2xl lg:text-[2rem] text-dark-color dark:text-white first-letter:capitalize font-extrabold">
+					<h1 className="text-xl md:text-2xl lg:text-[2rem] text-dark-color dark:text-white first-letter:capitalize font-bold">
 						Take a 3D tour through a Microsoft datacenter?
 					</h1>
 					<div className="flex items-center justify-between w-full">
@@ -105,9 +105,12 @@ const SinglePage = () => {
 								<span className="text-zinc-400 text-[.6rem] -mb-2 uppercase tracking-wide absolute top-12 left-40 sm:relative sm:top-0 sm:left-0">
 									written by
 								</span>
-								<h2 className="font-extrabold text-lg text-dark-color dark:text-white capitalize absolute top-16 left-40 sm:relative sm:top-0 sm:left-0">
+								<Link
+									href="/profile"
+									className="font-semibold text-lg hover:text-indigo-600 text-dark-color dark:text-white capitalize absolute top-16 left-40 sm:relative sm:top-0 sm:left-0"
+								>
 									naseem khan
-								</h2>
+								</Link>
 								<p className="text-sm md:text-xs lg:text-sm text-muted-foreground/80 dark:text-light-gray/90">
 									Hello, I&apos;m a content writer who is fascinated by content
 									fashion, celebrity and lifestyle. She helps clients bring the
