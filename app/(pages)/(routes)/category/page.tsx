@@ -1,9 +1,10 @@
-import Menu from "@/components/Menu";
-import PostReactions from "@/components/PostReactions";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import { MdKeyboardArrowRight } from "react-icons/md";
+
+import Menu from "@/components/Menu";
+import Pagination from "@/components/Pagination";
+import PostReactions from "@/components/PostReactions";
 
 const page = () => {
 	return (
@@ -60,6 +61,7 @@ const page = () => {
 							<PostReactions like={10} comment={20} />
 						</div>
 					</Link>
+					<Pagination />
 				</div>
 
 				<div className="w-full lg:flex-[.9]">

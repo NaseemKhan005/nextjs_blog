@@ -2,12 +2,11 @@ import Menu from "@/components/Menu";
 import PublishDate from "@/components/PublishDate";
 import SinglePostCard from "@/components/PostCard";
 import SocialLinks from "@/components/SocialLinks";
-import { Button } from "@/components/ui/button";
-import { Textarea } from "@/components/ui/textarea";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
 import { AiOutlineMessage } from "react-icons/ai";
+import Comments from "@/components/Comments";
 
 const SinglePage = () => {
 	return (
@@ -121,27 +120,15 @@ const SinglePage = () => {
 						</div>
 					</div>
 
-					<div className="flex flex-col gap-5">
-						<h2 className="text-xl font-extrabold">Leave a Reply</h2>
-						<Textarea
-							placeholder="Write a comment"
-							className="focus-visible:ring-[.5px] focus-visible:ring-indigo-600 text-[.8rem]"
-						/>
-						<div className="flex items-center gap-5">
-							<Button size="lg" className="px-7 py-6 dark:text-white">
-								Comment
-							</Button>
-							<Button size="lg" variant="ghost" className="px-9 py-6">
-								Cancel
-							</Button>
-						</div>
+					<div>
+						<Comments />
 					</div>
 				</div>
 				<Menu />
 			</div>
 
 			<div className="mt-20">
-				<h2 className="text-xl font-extrabold my-8">Related Posts</h2>
+				<h2 className="text-2xl font-semibold my-8">Related Posts</h2>
 				<div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
 					<SinglePostCard
 						link="/"
