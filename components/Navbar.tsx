@@ -40,7 +40,7 @@ const Navbar = () => {
 						<Input
 							type="text"
 							placeholder="Type to Search..."
-							className="rounded-full w-64 md:w-48 lg:w-72 text-xs pr-10"
+							className="rounded-full w-64 md:w-48 lg:w-72 text-sm pr-10"
 						/>
 						<LuSearch className="text-xl text-black/50 dark:text-white/80 absolute right-4 top-1/2 -translate-y-1/2" />
 					</div>
@@ -50,7 +50,7 @@ const Navbar = () => {
 					<div>
 						<ul
 							className={cn(
-								"capitalize z-50 flex md:items-center gap-1 md:gap-3 lg:gap-8 text-sm md:text-[.8rem] lg:text-[.8rem] fixed md:relative bg-white dark:bg-dark-color md:w-auto md:bg-transparent dark:md:bg-transparent h-screen md:h-auto top-0 left-0 flex-col md:flex-row shadow-xl py-20 md:py-0 overflow-hidden transition-all duration-500 dark:border-r dark:border-white/5 dark:md:border-r-0 md:shadow-none dark:text-white/70",
+								"capitalize z-50 flex md:items-center gap-1 md:gap-3 lg:gap-8 text-sm fixed md:relative bg-white dark:bg-dark-color md:w-auto md:bg-transparent dark:md:bg-transparent h-screen md:h-auto top-0 left-0 flex-col md:flex-row shadow-xl py-20 md:py-2 overflow-hidden transition-all duration-500 dark:border-r dark:border-white/5 dark:md:border-r-0 md:shadow-none dark:text-white/70",
 								menu ? "w-full sm:w-80" : "w-0"
 							)}
 						>
@@ -67,7 +67,7 @@ const Navbar = () => {
 								<Input
 									type="text"
 									placeholder="Type to Search..."
-									className="sm:w-72 mx-auto text-xs pl-10 border-0 bg-muted-foreground/5 focus-within:bg-muted-foreground/10 hover:bg-muted-foreground/10 dark:bg-muted-foreground/10 py-6"
+									className="sm:w-72 mx-auto text-sm pl-10 border-0 bg-muted-foreground/5 focus-within:bg-muted-foreground/10 hover:bg-muted-foreground/10 dark:bg-muted-foreground/10 py-6"
 								/>
 								<LuSearch className="text-[1.3rem] text-black/80 dark:text-white/80 absolute left-6 top-1/2 -translate-y-1/2" />
 							</div>
@@ -78,9 +78,9 @@ const Navbar = () => {
 									<Link
 										href={link.path}
 										className={cn(
-											"block md:inline-block hover:bg-muted-foreground/5 dark:hover:bg-muted-foreground/10 md:bg-transparent md:hover:bg-transparent dark:md:hover:bg-transparent dark:md:bg-transparent w-full rounded-md px-3 py-[.95rem] md:p-0 hover:text-indigo-600 dark:hover:text-white",
+											"block md:inline-block hover:bg-muted-foreground/5 dark:hover:bg-muted-foreground/10 md:bg-transparent md:hover:bg-transparent dark:md:hover:bg-transparent dark:md:bg-transparent w-full rounded-md px-3 py-[.95rem] md:p-0 hover:text-indigo-600 dark:hover:text-white relative before:absolute before:left-1/2 before:-bottom-[3px] before:-translate-x-1/2 before:w-0 before:h-[2px] sm:before:hover:w-full before:bg-indigo-600 dark:before:bg-white before:transition-all before:duration-500 before:rounded-full",
 											pathname === link.path
-												? "bg-muted-foreground/5 dark:bg-muted-foreground/10 text-indigo-600 dark:text-white"
+												? "bg-muted-foreground/5 dark:bg-muted-foreground/10 text-indigo-600 dark:text-white sm:before:w-full"
 												: "hover:bg-muted-foreground/5 dark:hover:bg-muted-foreground/10"
 										)}
 									>
@@ -104,18 +104,25 @@ const Navbar = () => {
 
 					<div className="flex items-center gap-0 text-xl">
 						<span className="hidden md:block w-[.5px] h-7 mx-3 lg:mx-4 bg-zinc-500/30" />
-						<Button
-							variant="ghost"
-							size="sm"
-							className="text-[.7rem] md:text-[.8rem] md:py-5"
-						>
-							<AiOutlinePlus className="text-sm md:text-base mr-1" />
-							<span>Create</span>
-						</Button>
+						<Link href="/create">
+							<Button
+								variant="ghost"
+								size="sm"
+								className={cn(
+									"text-[.7rem] md:text-[.8rem] md:py-5",
+									pathname === "/create" ? "bg-neutral-100 dark:bg-muted-foreground/10" : ""
+								)}
+							>
+								<AiOutlinePlus className="text-sm md:text-base mr-1" />
+								<span>Create</span>
+							</Button>
+						</Link>
 						<ToggleTheme />
-						<Button size="icon" variant="ghost">
-							<AiOutlineUser />
-						</Button>
+						<Link href="/login">
+							<Button size="icon" variant="ghost">
+								<AiOutlineUser />
+							</Button>
+						</Link>
 						<Button
 							variant="ghost"
 							size="icon"

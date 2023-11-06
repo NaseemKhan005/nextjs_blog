@@ -17,9 +17,9 @@ const Login = () => {
 
 	return (
 		<form action="">
-			<div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0 relative">
-				<div className="w-full bg-white dark:bg-[#272e44] rounded-lg shadow-xl drop-shadow-sm md:mt-0 sm:max-w-sm xl:p-0">
-					<div className="p-6 space-y-4 md:space-y-6 sm:px-8 py-10">
+			<div className="flex flex-col items-center justify-center sm:px-6 pt-8 mx-auto md:h-screen lg:py-0 relative">
+				<div className="w-full sm:bg-white sm:dark:bg-[#272e44] rounded-lg sm:shadow-xl sm:drop-shadow-sm md:mt-0 sm:max-w-[26rem] xl:p-0">
+					<div className="p-2 sm:p-6 space-y-4 md:space-y-6 sm:px-8 py-10">
 						<h1 className="text-xl font-bold leading-tight tracking-tight text-gray-900 dark:text-white md:text-2xl">
 							Sign in to your account
 						</h1>
@@ -46,7 +46,6 @@ const Login = () => {
 								>
 									Password
 								</label>
-								{/* <div className="relative"></div> */}
 								<Input
 									type={showPassword ? "text" : "password"}
 									name="password"
@@ -56,14 +55,14 @@ const Login = () => {
 								/>
 								{showPassword ? (
 									<span
-										className="text-xl p-2 text-black/50 dark:text-white hover:bg-indigo-500/10 rounded-full cursor-pointer absolute top-2/3 -translate-y-1/2 right-2 hover:text-indigo-600"
+										className="text-xl p-2 text-black/50 dark:text-white hover:bg-indigo-500/10 rounded-full cursor-pointer absolute top-[69%] -translate-y-1/2 right-2 hover:text-indigo-600"
 										onClick={() => setshowPassword(false)}
 									>
 										<AiOutlineEye />
 									</span>
 								) : (
 									<span
-										className="text-xl p-2 text-black/50 dark:text-white hover:bg-indigo-500/10 rounded-full cursor-pointer absolute top-2/3 -translate-y-1/2 right-2 hover:text-indigo-600"
+										className="text-xl p-2 text-black/50 dark:text-white hover:bg-indigo-500/10 rounded-full cursor-pointer absolute top-[69%] -translate-y-1/2 right-2 hover:text-indigo-600"
 										onClick={() => setshowPassword(true)}
 									>
 										<AiOutlineEyeInvisible />
@@ -72,7 +71,7 @@ const Login = () => {
 							</div>
 							<button
 								type="submit"
-								className="w-full text-white bg-indigo-600 hover:bg-indigo-700 focus:ring-4 focus:outline-none focus:ring-indigo-300 font-medium rounded-lg text-sm px-5 py-3 text-center"
+								className="w-full text-white bg-indigo-600 hover:bg-indigo-700 focus:ring-4 focus:outline-none focus:ring-indigo-300 font-medium rounded-lg text-sm px-5 py-4 text-center"
 							>
 								Sign in
 							</button>
@@ -84,7 +83,7 @@ const Login = () => {
 
 							<div className="flex flex-col gap-1">
 								<div className="flex items-center justify-between gap-1">
-									<Button className="w-full text-white py-6 bg-rose-500 hover:bg-rose-600">
+									<Button className="w-full text-white py-6 bg-neutral-700 hover:bg-neutral-800">
 										<FcGoogle className="text-lg mr-1" />
 										Google
 									</Button>

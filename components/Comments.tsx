@@ -30,7 +30,10 @@ const Comments = () => {
 					</div>
 				</>
 			) : (
-				<Link href="/login" className="px-7 py-6 dark:text-white">
+				<Link
+					href="/login"
+					className="text-base bg-indigo-600 text-white hover:bg-indigo-700 animate-bounce px-5 py-4 rounded-lg my-5 w-fit"
+				>
 					Login to write a comment
 				</Link>
 			)}
