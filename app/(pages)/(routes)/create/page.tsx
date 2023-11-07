@@ -54,7 +54,7 @@ const Page = () => {
 					>
 						<Input
 							type="file"
-							onChange={(e) => setFeaturedImage(e.target.value)}
+							onChange={() => setFeaturedImage("")}
 							accept="image/*"
 							className="w-full z-[1] h-full border-none absolute top-0 left-0 cursor-pointer opacity-0"
 						/>
