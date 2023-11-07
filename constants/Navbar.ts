@@ -12,7 +12,7 @@ export const navLinks = [
 		path: "/contact",
 	},
 	{
-		label: "policy",
-		path: "/policy",
+		label: "privacy",
+		path: "/privacy",
 	},
 ];

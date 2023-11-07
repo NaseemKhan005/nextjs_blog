@@ -1,12 +1,14 @@
 "use client";
-
 import { TbPhotoPlus } from "react-icons/tb";
 import { AiOutlinePlusCircle } from "react-icons/ai";
 import { useState } from "react";
 import ReactQuill from "react-quill";
 import * as DialogPrimitive from "@radix-ui/react-dialog";
-
 import "react-quill/dist/quill.snow.css";
+import Image from "next/image";
+import { FiEdit } from "react-icons/fi";
+import { BiTrash } from "react-icons/bi";
+import { IoClose } from "react-icons/io5";
 
 import { Input } from "@/components/ui/input";
 import {
@@ -19,27 +21,19 @@ import {
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { IoClose } from "react-icons/io5";
-import Image from "next/image";
-import { FiEdit } from "react-icons/fi";
-import { BiTrash } from "react-icons/bi";
 
-const page = () => {
-	const [category, setCategory] = useState("");
-	const [featuredImage, setFeaturedImage] = useState("");
+const Page = () => {
+	const [category, setCategory] = useState<string>("");
+	const [featuredImage, setFeaturedImage] = useState<string>("");
 	const [showImgIcons, setShowImgIcons] = useState(false);
-	const [value, setValue] = useState("");
-	console.log(featuredImage);
+	const [value, setValue] = useState<string>("");
 
 	var toolbarOptions = [
-		["bold", "italic", "underline"], // toggled buttons
+		["bold", "italic", "underline"],
 		["blockquote", "code-block"],
-
-		[{ header: 1 }, { header: 2 }], // custom button values
+		[{ header: 1 }, { header: 2 }],
 		[{ header: [1, 2, 3, 4, 5, 6, false] }],
 		[{ list: "ordered" }, { list: "bullet" }],
-
-		// [{ color: [] }, { background: [] }], // dropdown with defaults from theme
 		[{ align: [] }],
 		["link", "image"],
 	];
@@ -60,7 +54,7 @@ const page = () => {
 					>
 						<Input
 							type="file"
-							onChange={() => setFeaturedImage(e.target.value)}
+							onChange={(e) => setFeaturedImage(e.target.value)}
 							accept="image/*"
 							className="w-full z-[1] h-full border-none absolute top-0 left-0 cursor-pointer opacity-0"
 						/>
@@ -79,7 +73,7 @@ const page = () => {
 						) : (
 							<div className="w-full h-full relative">
 								<Image
-									src={"/category/1.webp"}
+									src={"/category/5.webp"}
 									alt="featured image"
 									width={500}
 									height={500}
@@ -88,7 +82,7 @@ const page = () => {
 								<div
 									className={cn(
 										"flex items-center gap-2 absolute top-3 right-3 text-white",
-										showImgIcons ? "flex" : "hidden"
+										showImgIcons ? "flex" : "md:hidden"
 									)}
 								>
 									<FiEdit className="text-3xl p-[.4rem] bg-black/90 rounded-md" />
@@ -119,7 +113,7 @@ const page = () => {
 									<DialogDescription className="flex items-center gap-2 flex-wrap">
 										<DialogPrimitive.Close>
 											<Button
-												onClick={() => setCategory(e.target.value)}
+												onClick={(e) => setCategory("")}
 												className="capitalize bg-muted-foreground/5 hover:bg-muted-foreground/10 focus-visible:bg-muted-foreground/20 text-black dark:text-white dark:bg-white/10 dark:hover:bg-white/20"
 											>
 												technology
@@ -157,7 +151,7 @@ const page = () => {
 					/>
 					<p
 						className={cn(
-							"absolute top-[5.8rem] sm:top-[3.7rem] left-4 text-base -z-[1] text-black/60 dark:text-white/50",
+							"absolute top-[5.8rem] sm:top-[3.6rem] left-4 text-base -z-[1] text-black/60 dark:text-white/50",
 							value.length ? "hidden" : "block"
 						)}
 					>
@@ -172,4 +166,4 @@ const page = () => {
 	);
 };
 
-export default page;
+export default Page;

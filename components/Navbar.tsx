@@ -1,24 +1,30 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { BiMenu } from "react-icons/bi";
 import { IoClose } from "react-icons/io5";
-import { AiOutlineUser, AiOutlinePlus } from "react-icons/ai";
+import { AiOutlinePlus } from "react-icons/ai";
 import { LuSearch } from "react-icons/lu";
+import { useSession } from "next-auth/react";
 
 import ToggleTheme from "@/components/ToggleTheme";
 import { Button } from "@/components/ui/button";
 import { navLinks } from "@/constants/Navbar";
 import { cn } from "@/lib/utils";
-import Image from "next/image";
 import { Input } from "./ui/input";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
 import SocialLinks from "./SocialLinks";
+import UserInfo from "./UserInfo";
+import NotLogin from "./NotLogin";
 
 const Navbar = () => {
 	const [menu, setMenu] = useState(false);
 	const pathname = usePathname();
+	const { data, status } = useSession();
+
+	console.log(data, status);
 
 	return (
 		<nav className="py-2 md:py-3 border-b border-black/10 dark:border-white/10">
@@ -50,7 +56,7 @@ const Navbar = () => {
 					<div>
 						<ul
 							className={cn(
-								"capitalize z-50 flex md:items-center gap-1 md:gap-3 lg:gap-8 text-sm fixed md:relative bg-white dark:bg-dark-color md:w-auto md:bg-transparent dark:md:bg-transparent h-screen md:h-auto top-0 left-0 flex-col md:flex-row shadow-xl py-20 md:py-2 overflow-hidden transition-all duration-500 dark:border-r dark:border-white/5 dark:md:border-r-0 md:shadow-none dark:text-white/70",
+								"capitalize z-50 flex md:items-center gap-1 md:gap-3 lg:gap-8 text-sm fixed md:relative bg-white dark:bg-dark-color md:w-auto md:bg-transparent dark:md:bg-transparent h-screen md:h-auto top-0 left-0 flex-col md:flex-row shadow-xl py-20 md:py-2 overflow-hidden transition-all duration-500 dark:border-r dark:border-white/5 font-[500] dark:md:border-r-0 md:shadow-none dark:text-white/70",
 								menu ? "w-full sm:w-80" : "w-0"
 							)}
 						>
@@ -102,27 +108,25 @@ const Navbar = () => {
 						</ul>
 					</div>
 
-					<div className="flex items-center gap-0 text-xl">
+					<div className="flex items-center gap-1 text-xl">
 						<span className="hidden md:block w-[.5px] h-7 mx-3 lg:mx-4 bg-zinc-500/30" />
 						<Link href="/create">
 							<Button
 								variant="ghost"
 								size="sm"
 								className={cn(
-									"text-[.7rem] md:text-[.8rem] md:py-5",
-									pathname === "/create" ? "bg-neutral-100 dark:bg-muted-foreground/10" : ""
+									"text-sm md:py-5",
+									pathname === "/create"
+										? "bg-neutral-100 dark:bg-muted-foreground/10"
+										: ""
 								)}
 							>
-								<AiOutlinePlus className="text-sm md:text-base mr-1" />
+								<AiOutlinePlus className="text-sm md:text-base mr-1 mt-[2px] md:mt-[1px]" />
 								<span>Create</span>
 							</Button>
 						</Link>
 						<ToggleTheme />
-						<Link href="/login">
-							<Button size="icon" variant="ghost">
-								<AiOutlineUser />
-							</Button>
-						</Link>
+						{status !== "authenticated" ? <NotLogin /> : <UserInfo />}
 						<Button
 							variant="ghost"
 							size="icon"
